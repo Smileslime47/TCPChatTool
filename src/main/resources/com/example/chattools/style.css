@@ -1,0 +1,10 @@
+.ButtonClass{
+    -fx-background-color: inherit;
+    -fx-border-color: grey;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+}
+.ButtonClass:hover{
+    -fx-background-color: grey;
+
+}

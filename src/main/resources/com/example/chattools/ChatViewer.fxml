@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="826.0" style="-fx-padding: 10;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chattools.WindowController">
+   <children>
+      <VBox prefHeight="542.0" prefWidth="264.0" style="-fx-padding: 10px;">
+         <children>
+            <Label prefHeight="40.0" prefWidth="239.0" text="目标IP">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <TextField fx:id="obj_IP" prefHeight="40.0" prefWidth="241.0" />
+            <HBox prefHeight="144.0" prefWidth="244.0">
+               <children>
+                  <VBox prefHeight="146.0" prefWidth="116.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="239.0" text="目标端口">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="obj_port" prefHeight="40.0" prefWidth="241.0" />
+                        <Separator orientation="VERTICAL" prefHeight="10.0" prefWidth="5.0" visible="false" />
+                        <Button mnemonicParsing="false" onAction="#linkClick" prefHeight="39.0" prefWidth="241.0" styleClass="ButtonClass" stylesheets="@style.css" text="连接">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Separator prefHeight="0.0" prefWidth="0.0" visible="false" />
+                  <VBox prefHeight="100.0" prefWidth="124.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="239.0" text="本地端口">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="local_port" prefHeight="40.0" prefWidth="241.0" />
+                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="4.0" visible="false" />
+                        <Button mnemonicParsing="false" onAction="#listenClick" prefHeight="39.0" prefWidth="241.0" styleClass="ButtonClass" stylesheets="@style.css" text="监听">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator orientation="VERTICAL" prefHeight="6.0" prefWidth="15.0" visible="false" />
+            <Button mnemonicParsing="false" onAction="#sendClick" prefHeight="55.0" prefWidth="241.0" styleClass="ButtonClass" stylesheets="@style.css" text="发送">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Label prefHeight="40.0" prefWidth="239.0" text="状态">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="status" editable="false" prefHeight="152.0" prefWidth="244.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="539.0" prefWidth="541.0" style="-fx-padding: 10px;">
+         <children>
+            <Label prefHeight="40.0" prefWidth="239.0" text="接受信息">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="receiveWin" editable="false" prefHeight="200.0" prefWidth="200.0" />
+            <Label prefHeight="40.0" prefWidth="239.0" text="发送信息">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="sendWin" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
